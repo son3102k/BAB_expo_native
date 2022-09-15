@@ -20,7 +20,7 @@ export default function CheckoutForm({ navigation }) {
       if (value !== null) {
         axios
           .post(
-            "http://10.145.55.43:8080/acqPurchase",
+            "http://10.145.55.29:8080/acqPurchase",
             {
               amount: getTotalPrice(),
               contractIdentifier: cardNumber,

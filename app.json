@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "BAB_expo_native",
-    "slug": "BAB_expo_native",
+    "name": "BAB",
+    "slug": "BAB",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

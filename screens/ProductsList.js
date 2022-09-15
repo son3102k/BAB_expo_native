@@ -27,24 +27,7 @@ export function ProductsList({ navigation }) {
 
   useEffect(()=> {
     setProducts(getProducts());
-    navigation.addListener('beforeRemove', (e)=> {
-      e.preventDefault();
-      Alert.alert(
-        'Warning!',
-        'Are you want to logout?',
-        [
-          { text: "No", style: 'cancel', onPress: () => {} },
-          {
-            text: 'Yes',
-            style: 'logout',
-            onPress: () => {
-              BackHandler.exitApp();
-            },
-          },
-        ]
-      );
-    });
-  }, [navigation]);
+  });
 
   return (
     <FlatList

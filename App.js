@@ -9,6 +9,7 @@ import { CartIcon } from "./components/CartIcon.js";
 import { CartProvider } from "./CartContext.js";
 import CheckoutForm from "./components/CheckoutForm.js";
 import Login from "./screens/Login.js";
+import HomeScreen from "./screens/HomeScreen.js";
 
 const Stack = createNativeStackNavigator();
 function App() {
@@ -21,6 +22,23 @@ function App() {
             component={Login}
             options={({ navigation }) => ({
               title: "",
+              headerTitleAlign: "center",
+              headerTitleStyle: {
+                color: "white",
+              },
+              headerTransparent: true,
+            })}
+          />
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={({ navigation }) => ({
+              title: "Home",
+              headerTitleAlign: "left",
+              headerTintColor: "white",
+              headerTitleStyle: {
+                color: "white",
+              },
               headerTransparent: true,
             })}
           />
