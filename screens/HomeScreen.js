@@ -9,8 +9,6 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
-import { AntDesign } from "@expo/vector-icons";
 import UserAvatar from "../components/UserAvatar";
 import { FontAwesome } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
@@ -18,6 +16,7 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import SlideShow from "../components/SlideShow";
 
 export default function HomeScreen({ navigation }) {
   useEffect(() => {
@@ -141,9 +140,12 @@ export default function HomeScreen({ navigation }) {
             <Text style={styles.touchableItemText}>More</Text>
           </View>
         </View>
-        <View style={styles.bodySlider}></View>
+        <View style={styles.bodySlider}>
+          <SlideShow />
+        </View>
       </View>
-      <View style={styles.footer}></View>
+      <View style={styles.footer}>
+      </View>
     </View>
   );
 }
