@@ -49,7 +49,6 @@ function App() {
               title: "Product List",
               headerTitleStyle: styles.headerTitle,
               headerRight: () => <CartIcon navigation={navigation} />,
-              headerBackVisible: false,
             })}
           />
           <Stack.Screen
