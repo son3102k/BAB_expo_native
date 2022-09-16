@@ -1,4 +1,11 @@
-import { FlatList, StyleSheet, SafeAreaView, Image, View } from "react-native";
+import {
+  FlatList,
+  StyleSheet,
+  SafeAreaView,
+  Image,
+  View,
+  TouchableOpacity,
+} from "react-native";
 
 const Data = [
   require("../assets/slide4.jpg"),
@@ -12,16 +19,18 @@ export default function SlideShow() {
     <SafeAreaView style={{ height: "100%", margin: 10 }}>
       <FlatList
         renderItem={({ item }) => (
-          <Image
-            source={item}
-            style={{
-              width: 250,
-              borderRadius: 8,
-              height: 150,
-              resizeMode: "contain",
-              marginLeft: 6,
-            }}
-          />
+          <TouchableOpacity>
+            <Image
+              source={item}
+              style={{
+                width: 250,
+                borderRadius: 8,
+                height: 150,
+                resizeMode: "contain",
+                marginLeft: 6,
+              }}
+            />
+          </TouchableOpacity>
         )}
         data={Data}
         horizontal
