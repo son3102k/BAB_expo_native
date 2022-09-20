@@ -14,6 +14,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import Account from "./screens/Account.js";
+import CardServices from "./screens/CardServices.js";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -105,6 +106,15 @@ function App() {
               title: "Product List",
               headerTitleStyle: styles.headerTitle,
               headerRight: () => <CartIcon navigation={navigation} />,
+            })}
+          />
+          <Stack.Screen
+            name="cardServices"
+            component={CardServices}
+            options={({ navigation }) => ({
+              title: "My Cards",
+              headerTitleStyle: styles.headerTitle,
+              headerTransparent: true,
             })}
           />
           <Stack.Screen

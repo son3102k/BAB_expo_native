@@ -12,10 +12,10 @@ import {
 import UserAvatar from "../components/UserAvatar";
 import { FontAwesome } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { SimpleLineIcons } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Feather } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
+import { SimpleLineIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import SlideShow from "../components/SlideShow";
 
 export default function HomeScreen({ navigation }) {
@@ -68,7 +68,10 @@ export default function HomeScreen({ navigation }) {
                 <Text style={styles.topHandleTextStyle}>Bank</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.payment}>
+            <TouchableOpacity
+              style={styles.payment}
+              onPress={() => navigation.navigate("cardServices")}
+            >
               <View style={styles.topHandleIcon}>
                 <FontAwesome name="credit-card" size={24} color="black" />
               </View>
@@ -90,7 +93,10 @@ export default function HomeScreen({ navigation }) {
       <View style={styles.body}>
         <View style={styles.bodyRow1}>
           <View style={styles.rowItem}>
-            <TouchableOpacity style={styles.touchableItem} onPress={()=> navigation.navigate("Products")}>
+            <TouchableOpacity
+              style={styles.touchableItem}
+              onPress={() => navigation.navigate("Products")}
+            >
               <FontAwesome name="shopping-cart" size={24} color="orange" />
             </TouchableOpacity>
             <Text style={styles.touchableItemText}>Buy</Text>
@@ -117,13 +123,21 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.bodyRow2}>
           <View style={styles.rowItem}>
             <TouchableOpacity style={styles.touchableItem}>
-              <SimpleLineIcons name="screen-smartphone" size={30} color="#009999" />
+              <SimpleLineIcons
+                name="screen-smartphone"
+                size={30}
+                color="#009999"
+              />
             </TouchableOpacity>
             <Text style={styles.touchableItemText}>Mobile topup</Text>
           </View>
           <View style={styles.rowItem}>
             <TouchableOpacity style={styles.touchableItem}>
-              <MaterialCommunityIcons name="credit-card-plus-outline" size={24} color="red" />
+              <MaterialCommunityIcons
+                name="credit-card-plus-outline"
+                size={24}
+                color="red"
+              />
             </TouchableOpacity>
             <Text style={styles.touchableItemText}>Open new card</Text>
           </View>
@@ -144,8 +158,7 @@ export default function HomeScreen({ navigation }) {
           <SlideShow />
         </View>
       </View>
-      <View style={styles.footer}>
-      </View>
+      <View style={styles.footer}></View>
     </View>
   );
 }
